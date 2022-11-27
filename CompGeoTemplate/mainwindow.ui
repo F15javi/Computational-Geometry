@@ -64,6 +64,13 @@
        </widget>
       </item>
       <item>
+       <widget class="QRadioButton" name="radioButton">
+        <property name="text">
+         <string>Iso-oriented segments</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="Line" name="line_3">
         <property name="lineWidth">
          <number>1</number>

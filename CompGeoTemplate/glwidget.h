@@ -20,6 +20,8 @@ signals:
 public slots:
     void radioButton1Clicked  ();
     void radioButton2Clicked  ();
+    void radioButton3Clicked  ();
+
 protected:
     void paintGL              ();
     void initializeGL         ();

@@ -171,66 +171,24 @@ double sqrt_distance(QPointF p1, QPointF p2)
 {
     return sqrt(pow(p2.x() - p1.x(), 2) + pow(p2.y() - p1.y(), 2));
 }
-std::vector<QPointF> Graham_scan()
-{
-    sort(Point_list.begin(),Point_list.end(), compare_x);
-    qDebug() << "Point : "<<Point_list.front();
-
-    std::vector<QPointF> L_upper;
-    std::vector<QPointF> L_lower;
-
-    auto it_f = std::next(Point_list.begin(), 1);
-
-
-    L_upper.push_back(Point_list.front());      //Point 1
-    L_upper.push_back(*it_f);                     //Point 2
-
-    for(int i=3; i<=Point_list.size(); i++){
-
-        it_f++;
-        L_upper.push_back(*it_f);
-        while(L_upper.size()>2 && line_turn(L_upper[L_upper.size()-2],L_upper[L_upper.size()-1],L_upper[L_upper.size()])!=2){
-            L_upper.erase(L_upper.end()-1);
-
-        }
-    }
-    auto it_b = std::next(Point_list.end(), -1);
-
-    L_lower.push_back(Point_list.back());      //Point 1
-    L_lower.push_back(*it_b);                     //Point 2
-
-    for(int i=Point_list.size()-2; i>=1; i--){
-
-        it_b--;
-        L_lower.push_back(*it_b);
-        while(L_lower.size()>2 && line_turn(L_lower[L_lower.size()-2],L_lower[L_lower.size()-1],L_lower[L_lower.size()])!=2){
-            L_lower.erase(L_lower.end()-1);
-
-        }
-    }
-
-    L_lower.erase(L_lower.begin());
-    L_lower.pop_back();
-
-    L_upper.insert(L_upper.end(), L_lower.begin(), L_lower.end());
-    return L_upper;
-
-
-
-
-}
 
 void GLWidget::radioButton1Clicked()
 {
     // TODO: toggle to Jarvis' march
+
+    Graham_list = {};
+    Jarvis_list = {};
+
     int n = Point_list.size();
     int l = 0;
+
     for (int i = 1; i < n; i++) {
         if (Point_list.at(i).x() < Point_list.at(l).x()) l = i;
     }
     Jarvis_list.push_back(Point_list.at(l));
 
     int p = l, q;
+
     while (true) {
         q = (p + 1) % n;
         for (int i = 0; i < n; i++) {
@@ -240,8 +198,10 @@ void GLWidget::radioButton1Clicked()
                 q = i;
             }
         }
+
         p = q;
         Jarvis_list.push_back(Point_list.at(p));
+
         if (p == l) {
             break;
         }
@@ -251,7 +211,8 @@ void GLWidget::radioButton1Clicked()
 
 void GLWidget::radioButton2Clicked()
 {
-
+    Graham_list = {};
+    Jarvis_list = {};
     int i, n;
 
     n = Point_list.size();
@@ -291,37 +252,7 @@ void GLWidget::radioButton2Clicked()
 
     update();
 }
-QPointF endPoint_finder(QPointF S_P, QPointF E_P, std::vector<QPointF> List_P,int i){
-
-    //S_P = Start point and E_P = end point
-
-    double min_angle = 0.0;
-    QPointF qi;
-
-    for(int j = i; j<List_P.size(); j++){
-
-
-        QPointF v1;
-        QPointF v2;
-
-        v1.setX(List_P.at(i-1).x()-S_P.x());
-        v1.setY(List_P.at(i-1).y()-S_P.x());
-
-        v2.setX(E_P.x()-S_P.x());
-        v2.setY(E_P.y()-S_P.x());
-
-        double cos_angle = (v1.x()*v2.x()+v1.y()*v2.y())/((sqrt(v1.x()*v1.x()+v1.y()*v1.y()))*(v2.x()*v2.x()+v2.y()*v2.y()));
-        double angle = acos(cos_angle);
-
-        if(angle < min_angle || min_angle == 0.0){
-            min_angle = angle;
-            qi = List_P.at(j);
-        }
-
-    }
-    return qi;
-
-
+void GLWidget::radioButton3Clicked(){
 
 
 }
