@@ -1,0 +1,2 @@
+﻿  Uebung1.cpp
+C:\Users\f15ja\Desktop\universidad\Erasmus\CG\Ejercicios\Ejercicio1\Uebung1\Uebung1\Uebung1.cpp(486,1): fatal error C1010: final de archivo inesperado al buscar la directiva de encabezado precompilado. Compruebe si olvidó agregar '#include "stdafx.h"' al código fuente?

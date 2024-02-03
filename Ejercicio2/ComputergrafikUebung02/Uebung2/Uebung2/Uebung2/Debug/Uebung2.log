@@ -1,0 +1,7 @@
+﻿  main.cpp
+C:\Users\f15ja\Desktop\universidad\Erasmus\CG\Ejercicios\Ejercicio2\ComputergrafikUebung02\Uebung2\main.cpp(343,28): warning C4101: 'dy': variable local sin referencia
+C:\Users\f15ja\Desktop\universidad\Erasmus\CG\Ejercicios\Ejercicio2\ComputergrafikUebung02\Uebung2\main.cpp(343,24): warning C4101: 'dx': variable local sin referencia
+C:\Users\f15ja\Desktop\universidad\Erasmus\CG\Ejercicios\Ejercicio2\ComputergrafikUebung02\Uebung2\main.cpp(553,34): warning C4838: la conversión de 'int' en 'float' requiere una conversión de restricción
+C:\Users\f15ja\Desktop\universidad\Erasmus\CG\Ejercicios\Ejercicio2\ComputergrafikUebung02\Uebung2\main.cpp(553,52): warning C4838: la conversión de 'int' en 'float' requiere una conversión de restricción
+  main.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  Uebung2.vcxproj -> C:\Users\f15ja\Desktop\universidad\Erasmus\CG\Ejercicios\Ejercicio2\ComputergrafikUebung02\Uebung2\Uebung2\Debug\Uebung2.exe

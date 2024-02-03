@@ -1,0 +1,7 @@
+﻿  Uebung1.cpp
+C:\Users\f15ja\Desktop\universidad\Erasmus\CG\Ejercicios\Ejercicio1\Uebung1\Uebung1\Uebung1.cpp(348,28): warning C4101: 'dy': variable local sin referencia
+C:\Users\f15ja\Desktop\universidad\Erasmus\CG\Ejercicios\Ejercicio1\Uebung1\Uebung1\Uebung1.cpp(348,24): warning C4101: 'dx': variable local sin referencia
+  .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+  Generando código...
+  Uebung1.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  Uebung1.vcxproj -> C:\Users\f15ja\Desktop\universidad\Erasmus\CG\Ejercicios\Ejercicio1\Uebung1\Debug\Uebung1.exe
